@@ -188,6 +188,7 @@ t/{sample}/03.Kraken2/Bracken/{sample}.Species.bracken.report"
 		'''
 
 ##############################################Trinity##assemble#########################################################################
+######trinity
 
 
 rule spades:
