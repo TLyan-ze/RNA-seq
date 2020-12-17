@@ -1,0 +1,43 @@
+params:
+  samples: "samples.tsv"
+
+  
+  fastp:
+    save_reads: False
+    oas1:
+      do: False
+      quality_system: 33
+      min_length: 30
+      seed_oa: 0.9
+      fragment_oa: 0.8
+    sickle:
+      do: False
+      quality_type: "sanger"
+      sickle_pe: ""
+      length_cutoff: 51
+      quality_cutoff: 20
+    fastp:
+      do: True
+      threads: 4
+      disable_adapter_trimming: True
+      use_slide_window: True
+      compression: 6
+      cut_front_window_size: 4
+      cut_front_mean_quality: 20
+      cut_tail_window_size: 4
+      cut_tail_mean_quality: 20
+      cut_right_window_size: 4
+      cut_right_mean_quality: 20
+      length_required: 51
+      n_base_limit: 5
+
+  
+
+output:
+  fastp: "results/00.QC/fastp"
+  soft: "results/00.QC/soft"
+  pri: "results/01.pri"
+  sortmerRNA: "results/02.sortmerRNA"
+  kraken: "results/03.kraken"
+  trinity: "results/04.trinity"
+  
